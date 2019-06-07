@@ -1,0 +1,73 @@
+<html>
+    <head>
+      <title>jquery</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+          var i;
+          var dummy;
+          var dummy1;
+          $(document).ready(function(){
+              var strng=$('#string').value;
+              $("button").click(function(){
+                for(i=1;i<=4;i++){
+                  dummy=document.getElementById("name"+i);
+                  if(dummy.innerHTML.includes(strng)){
+                   //   dummy1=getElementById("col"+i);
+                    //  dummy1.setAttribute("id","dummyId");
+
+                      
+
+                  }else{
+                    dummy1=getElementById("col"+i);
+                    dummy1.setAttribute("class","dummyclass");
+                    $('.dummyclass').remove();
+
+
+                  }
+              
+                }
+
+
+              })
+          })
+      </script>
+
+    </head>
+    <body>
+        <form>
+            string:<input type='text' id='string'>
+            <input type='button' id='go' value='GO' onclick="fun1()">
+         </form><br>
+
+        <table>
+            
+            <tr>
+                <th >name</th>
+                <th>roll no</th>
+                <th>age</th>
+            </tr>
+            <tr id='col1'>
+                <td id="name1">raghu</td>
+                <td id="roll1">100002</td>
+                <td id="age1">17</td>
+            </tr>
+            <tr  id ='col2'>
+                    <td id='name2'>humai</td>
+                    <td id="roll2">100001</td>
+                    <td id="age2">19</td>
+            </tr>
+            <tr id ='col3'> 
+                    <td id='name3'> humin</td>
+                    <td id="roll3">100004</td>
+                    <td id="age3">20</td>
+                </tr>
+                <tr id ='col4'>
+                        <td id='name4'>ram</td>
+                        <td id="roll4">100007</td>
+                        <td id="age4">18</td>
+                    </tr>
+            
+        </table>
+    </body>
+    </body>
+</html>
