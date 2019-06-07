@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>responsive slider</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+            body{
+                font-size: 300%
+                
+
+            }
+            li{
+                float:left;
+            }
+            .go{
+                display:none;
+            }
+            #front{
+                float:right;
+            }
+
+
+
+        </style>
+
+        <script>
+
+            function fun1(){
+                var back=document.getElementById("back")
+                var frame=document.getElementById("frame")
+                if(frame.src=="https://www.bing.com/"){
+                    frame.setAttribute("src","https://www.wikipedia.org/")
+                    var front=document.getElementById("front")
+                    front.style.display="block";
+
+                    return;
+
+                }
+                if(frame.src=="https://www.wikipedia.org/"){
+                    frame.setAttribute("src","https://www.hotstar.com/")
+                    back.style.display="none";
+
+                    
+                }
+                
+            }
+
+            function fun2(){
+                var front=document.getElementById("front")
+                var frame=document.getElementById("frame")
+                var back=document.getElementById("back")
+                if(frame.src=="https://www.hotstar.com/"){
+                    
+                    
+
+                    back.style.display="block";
+                    frame.setAttribute("src","https://www.wikipedia.org/")
+                    return ;
+
+                }
+                
+                if(frame.src=="https://www.wikipedia.org/"){
+                    frame.setAttribute("src","https://www.bing.com/")
+                    front.style.display="none";;
+
+                }
+            }
+
+        </script>
+
+    </head>
+
+
+
+
+    <body>
+
+
+        <center>
+        <h1>Responsive Slider</h1></center>
+        <ul>
+            <li class='col-3'></li>
+
+            <li id='back' onclick="fun1()" class='col-1 go'><</li>
+            <center><li><iframe src="https://www.hotstar.com/" height='400' width='600' id="frame"></iframe></li></center>
+
+            <li id='front' onclick="fun2()" class='col-3' >></li>
+        </ul>
+
+
+
+    </body>
+
+
+
+
+</html>
