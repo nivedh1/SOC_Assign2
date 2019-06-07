@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script>
+           var i;
+            var dummyName;
+            var dummyRoll;
+            var dummyAge;
+
+            function fun1(){
+                var strng=document.getElementById('string').value
+               // var dummy=document.getElementById("name"+1)
+               // var check=dummy.includes(strng)
+               // dummy.innerHTML=strng;
+            //  if(dummy.innerHTML.includes(strng)){
+              //    dummy.innerHTML=strng;
+            //  }
+               //var k="name"+1;
+                // var dummy=document.getElementById(k)  get
+                // dummy.style.display="none"
+                
+                // dummy.style.backgroundColor = "red";             
+
+
+                for(i=1;i<=4;i++){
+                     dummyName=document.getElementById("name"+i)
+                   //  dummy.style.display="none";
+                    
+                    if(dummyName.innerHTML.includes(strng)){
+                      // dummy.style.display="none";
+                        
+
+                    }else{
+                       // var dummy2=getElementById("col"+i)
+                       // dummy2.style.display="none"
+                        dummyName.style.display="none";
+                        dummyRoll=document.getElementById("roll"+i)
+                        dummyAge=document.getElementById("age"+i)
+                        dummyRoll.style.display="none"
+                        dummyAge.style.display="none"
+
+                        
+                    }
+
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <form>
+            string:<input type='text' id='string'>
+            <input type='button' id='go' value='GO' onclick="fun1()">
+         </form><br>
+
+        <table>
+            
+            <tr>
+                <th >name</th>
+                <th>roll no</th>
+                <th>age</th>
+            </tr>
+            <tr id='col1'>
+                <td id="name1">raghu</td>
+                <td id="roll1">100002</td>
+                <td id="age1">17</td>
+            </tr>
+            <tr  id ='col2'>
+                    <td id='name2'>humai</td>
+                    <td id="roll2">100001</td>
+                    <td id="age2">19</td>
+            </tr>
+            <tr id ='col3'> 
+                    <td id='name3'> humin</td>
+                    <td id="roll3">100004</td>
+                    <td id="age3">20</td>
+                </tr>
+                <tr id ='col4'>
+                        <td id='name4'>ram</td>
+                        <td id="roll4">100007</td>
+                        <td id="age4">18</td>
+                    </tr>
+            
+        </table>
+    </body>
+</html>
